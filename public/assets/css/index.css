@@ -1,9 +1,14 @@
+@import 'main.css';
+
 :root {
   --text-color-primary: #ffffff;
+  --text-color-second: #dddddd;
 
   --bg-color-primary: #000000;
   --bg-color-second: #ffffff22;
   --bg-color-third: #444444;
+
+  --border-color-primary: #ffffff;
 }
 
 * {
