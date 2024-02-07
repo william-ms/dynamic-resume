@@ -1,0 +1,6 @@
+/public/assets/images/*
+!/public/assets/images/bg-default.jpg
+/public/assets/icons/*
+/public/assets/videos/*
+/vendor
+.env
