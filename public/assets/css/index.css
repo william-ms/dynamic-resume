@@ -1,4 +1,5 @@
 @import 'main.css';
+@import 'about.css';
 
 :root {
   --text-color-primary: #ffffff;
@@ -15,7 +16,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto','sans-serif';
+  font-family: "Space Mono", monospace;
 }
 
 html, body {
@@ -37,6 +38,9 @@ html, body {
 }
 
 .home {
+  display:flex;
+  flex-wrap: wrap;
+  width: 100%;
   height: 100%;
 }
 

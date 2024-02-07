@@ -1,6 +1,8 @@
 main {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 40%;
   height: 100%;
 }
 
@@ -8,7 +10,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40%;
 }
 
 .perfil-image {
@@ -30,24 +31,24 @@ main {
 }
 
 .perfil-title h1 {
-  font-size: 26px;
   color: var(--text-color-primary);
+  font-size: 30px;
 }
 
 .perfil-title h2 {
   padding-bottom: 20px;
-  font-size: 18px;
+  font-size: 24px;
   color: var(--text-color-second);
   border-bottom: 1px solid var(--border-color-primary);
 }
 
 .perfil-skills img{
-  width: 40px;
+  width: 60px;
 }
 
 @media screen and (max-width: 960px) {
 
-  .perfil {
+  main {
     width: 100%;
   }
 
