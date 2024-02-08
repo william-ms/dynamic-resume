@@ -19,7 +19,6 @@
 .about-text p {
   margin-bottom: 20px;
   text-align: justify;
-  font-size: 16px;
   color: var(--text-color-primary);
 }
 

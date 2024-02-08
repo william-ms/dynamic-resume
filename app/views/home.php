@@ -108,4 +108,18 @@
       <a href="/home/show">ver todos os projetos</a>
     </div>    
   </section>
+
+  <section id="contact">
+   <div class="contact-title">
+      <h2>Contato</h2>
+    </div>
+
+    <div class="contact-social">
+      <span class="link-ct"><i class="fa-solid fa-phone"></i>(32) 98816-1383</span>
+      <span class="link-ct"><i class="fa-solid fa-envelope"></i>williamsartini@hotmail.com</span>
+      <a class="link-ct" href="https://www.instagram.com/william_msartini"><i class="fa-brands fa-instagram"></i>william_msartini</a>
+      <a class="link-ct" href="https://www.linkedin.com/in/william-sartini"><i class="fa-brands fa-linkedin"></i>william-sartini</a>
+      <a class="link-ct" href="https://github.com/william-ms"><i class="fa-brands fa-github"></i>William-MS</a>
+    </div>
+  </section>
 </div>

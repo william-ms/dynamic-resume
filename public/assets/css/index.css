@@ -1,16 +1,26 @@
 @import 'main.css';
 @import 'about.css';
 @import 'projects.css';
+@import 'contact.css';
 
 :root {
   --text-color-primary: #ffffff;
   --text-color-second: #dddddd;
+  --text-color-third: #1e65e0;
 
   --bg-color-primary: #000000;
-  --bg-color-second: #ffffff22;
-  --bg-color-third: #444444;
+  --bg-color-second: #1e65e0;
+  --bg-color-third: #222222;
+
+  --bg-color-alpha-primary: #ffffff44;
 
   --border-color-primary: #ffffff;
+  --border-color-second: #1e65e0;
+
+  --shadow-color-primary: #ffffff;
+  --shadow-color-second: #1e65e0;
+  --shadow-color-third: #525252;
+
 }
 
 * {
@@ -53,7 +63,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--bg-color-second);
+  background-color: var(--bg-color-alpha-primary);
 }
 
 header nav ul
