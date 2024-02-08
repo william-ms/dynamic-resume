@@ -1,6 +1,7 @@
 @import 'main.css';
 @import 'about.css';
 @import 'projects.css';
+@import 'all-projects.css';
 @import 'contact.css';
 
 :root {
@@ -20,7 +21,6 @@
   --shadow-color-primary: #ffffff;
   --shadow-color-second: #1e65e0;
   --shadow-color-third: #525252;
-
 }
 
 * {

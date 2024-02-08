@@ -30,4 +30,16 @@
         'projects' => $projects,
       ]);
     }
+
+    public function show(array $args)
+    {
+      $projects = (new ProjectsModel)->execute(new FindAll());
+
+
+      return view('projects', [
+        'title' => 'Todos os Projetos',
+        'extends' => 'main',
+        'projects' => $projects
+      ]);
+    }
   }
