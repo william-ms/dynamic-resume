@@ -1,5 +1,6 @@
 @import 'main.css';
 @import 'about.css';
+@import 'projects.css';
 
 :root {
   --text-color-primary: #ffffff;
@@ -26,7 +27,8 @@ html, body {
 
 .container {
   max-width: 1400px;
-  padding: 4%;
+  margin: 0 auto;
+  padding: 0 4%;
 }
 
 .content {

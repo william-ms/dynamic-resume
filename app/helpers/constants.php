@@ -12,6 +12,8 @@
   define('CSS_PATH', '/assets/css/');
   define('JAVASCRIPT_PATH', '/assets/js/');
   define('IMAGE_PATH', '/assets/images/');
+  define('ICON_PATH', '/assets/icons/');
+  define('VIDEO_PATH', '/assets/videos/');
 
   // validate
   define('REQUIRED', 'ValidateRequired');

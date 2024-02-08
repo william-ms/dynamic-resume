@@ -43,11 +43,10 @@ main {
 }
 
 .perfil-skills img{
-  width: 60px;
+  width: 50px;
 }
 
 @media screen and (max-width: 960px) {
-
   main {
     width: 100%;
   }
