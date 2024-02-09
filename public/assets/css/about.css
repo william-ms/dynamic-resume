@@ -3,28 +3,72 @@
   flex-direction: column;
   justify-content: center;
   width: 60%;
-  height: 100%;
   padding: 4%;
 }
 
-.about-title h2 {
-  color: var(--text-color-primary);
-  font-size: 30px;
+#about .section-title {
+  text-align: left;
 }
 
 .about-text {
-  padding: 100px 0;
+  padding-top: 100px;
 }
 
 .about-text p {
   margin-bottom: 20px;
-  text-align: justify;
   color: var(--text-color-primary);
 }
 
 @media screen and (max-width: 960px) {
   #about {
     width: 100%;
-    text-align: center;
+    background-color: var(--bg-color-third);
+    background-image: url('../images/bg-about.png');
+    background-position: 94% 80%;
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
+    border-top: 10px solid var(--border-color-third);
+    border-bottom: 10px solid var(--border-color-third);
+  }
+
+  .about-text p:nth-child(1) {
+    width: 80%;
+  }
+
+  .about-text p:nth-child(2) {
+    width: 60%
+  }
+
+  .about-text p:nth-child(3) {
+    width: 50%
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #about {
+    background-size: 240px 240px;
+  }
+
+  .about-text p:nth-child(2) {
+    width: 60%
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #about {
+    background-position: 92% 92%;
+    background-size: 180px 180px;
+  }
+
+  .about-text p:nth-child(2) {
+    width: 100%
+  }
+
+  .about-text p:nth-child(2) {
+    width: 100%
+  }
+
+  .about-text p:nth-child(3) {
+    width: 55%;
   }
 }

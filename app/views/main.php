@@ -18,11 +18,9 @@
     </header>
 
     <section class="content">
-      <div class="container">
-        <?php include_view($view) ?>
-      </div>
+      <?php include_view($view) ?>
     </section>
 
-    <script src="/assets/js/index.js"></script>
+    <script src="<?php echo JAVASCRIPT_PATH ?>index.js"></script>
   </body>
 </html>

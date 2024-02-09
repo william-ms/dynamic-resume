@@ -13,10 +13,12 @@
   --bg-color-second: #1e65e0;
   --bg-color-third: #222222;
 
-  --bg-color-alpha-primary: #ffffff44;
+  --bg-color-alpha-primary: #ffffff22;
+  --bg-color-alpha-second: #000000cc;
 
   --border-color-primary: #ffffff;
   --border-color-second: #1e65e0;
+  --border-color-third: #111111;
 
   --shadow-color-primary: #ffffff;
   --shadow-color-second: #1e65e0;
@@ -30,30 +32,9 @@
   font-family: "Space Mono", monospace;
 }
 
-html, body {
-  height: 100%;
-  background-color: var(--bg-color-primary);
-}
-
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 4%;
-}
-
-.content {
-  height: 100%;
-}
-
-.content .container {
-  height: 100%;
-}
-
-.home {
-  display:flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
 }
 
 /*============================================================================*/
@@ -64,6 +45,7 @@ header {
   left: 0;
   width: 100%;
   background-color: var(--bg-color-alpha-primary);
+  z-index: 1;
 }
 
 header nav ul
@@ -81,9 +63,6 @@ header nav ul li a {
   text-decoration: none;
   font-size: 26px;
 }
-  header nav ul li:hover {
-    background-color: var(--bg-color-third);
-  }
 
 @media screen and (max-width: 960px) {
 
@@ -91,4 +70,19 @@ header nav ul li a {
     line-height: 40px;
     font-size: 20px;
   }
+}
+
+/*============================================================================*/
+/*============================================================================*/
+.section-title {
+  width: 100%;
+  text-align: center;
+}
+
+.section-title h2 {
+  display: inline;
+  color: var(--text-color-primary);
+  font-size: 30px;
+  padding: 0 10px;
+  border-bottom: 4px solid var(--border-color-second);
 }

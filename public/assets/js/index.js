@@ -6,7 +6,7 @@ window.onload = ()=>
   {
     let projectThumb = project.querySelector('.project-thumb');
     let projectModal = project.querySelector('.project-modal');
-    let btnCloseModal = project.querySelector('.project-content-close');
+    let btnCloseModal = project.querySelector('.project-modal-close');
 
     projectThumb.addEventListener('click', ()=>
     {
