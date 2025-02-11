@@ -1,0 +1,83 @@
+main {
+  position: relative;
+}
+
+main .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../images/bg-main.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+  .main-layer {
+    width: 100%;
+    height: 100%;
+    background-color: #000000bb;
+  }
+
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 100vh;
+  padding: 4%;
+}
+
+.perfil-image {
+  width: 300px;
+  height: 300px;
+  border: 2px solid var(--text-color-primary);
+  border-radius: 10%;
+}
+
+.perfil-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+}
+
+.perfil-title {
+  text-align: center;
+  padding: 30px 0 20px 0;
+}
+
+.perfil-title h1 {
+  color: var(--text-color-primary);
+  font-size: 28px;
+}
+
+.perfil-title h2 {
+  padding-bottom: 20px;
+  font-size: 24px;
+  color: var(--text-color-second);
+  border-bottom: 1px solid var(--border-color-primary);
+}
+
+.perfil-skills img{
+  width: 50px;
+}
+
+@media screen and (max-width: 960px) {
+  .perfil {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .perfil-image {
+    width: 160px;
+    height: 160px;
+  }
+}

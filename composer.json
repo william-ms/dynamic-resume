@@ -2,28 +2,22 @@
     "name": "william/project-name",
     "author": "william sartini",
     "description": "",
-
     "minimum-stability": "stable",
     "require": {
         "vlucas/phpdotenv": "^5.6"
     },
-
     "autoload": {
         "psr-4": {
             "app\\": "app/"
         },
-
         "files": [
-            "app/helpers/constants.php",
-            "app/helpers/dump.php",
+            "app/helpers/dotenv.php",
             "app/helpers/exception.php",
             "app/helpers/flash.php",
+            "app/helpers/macros.php",
             "app/helpers/old.php",
-            "app/helpers/redirect.php",
             "app/helpers/session.php",
-            "app/helpers/view.php",
-
-            "app/helpers/dotenv.php"
+            "app/helpers/view.php"
         ]
     }
 }

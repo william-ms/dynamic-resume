@@ -1,38 +1,22 @@
 <?php
-  namespace app\core;
 
-  use Exception;
+namespace app\core;
 
-  class ControllerExtract
-  {
-    public static function extract($uri):string
-    {
-      $folder = FolderExtract::extract($uri);
+use app\library\controllers\Controller;
+use Exception;
 
-      if($folder)
-      {
-        $controller = Uri::uriExist($uri, index:1);
-        $namespace = "app\\controllers\\". $folder ."\\";
-      }
-      else
-      {
-        $controller = Uri::uriExist($uri, index:0);
-        $namespace = "app\\controllers\\";
-      }
+class ControllerExtract
+{
+	public static function extract(string $controller): string
+	{
+		if (!class_exists($controller)) {
+			throw new Exception("Controller {$controller} not found");
+		}
 
-      if(!$controller)
-      {
-        $controller = CONTROLLER_DEFAULT;
-      }
+		if (!in_array(Controller::class, class_parents($controller))) {
+			throw new Exception("Controller {$controller} does not extend the Controller class");
+		}
 
-      $namespaceAndController = $namespace . ucfirst($controller);
-
-      if(class_exists($namespaceAndController))
-      {
-        return $namespaceAndController;
-      }
-      else{
-        throw new Exception(message: "O controller {$controller} não foi encontrado na pasta {$namespace}");
-      }
-    }
-  }
+		return $controller;
+	}
+}

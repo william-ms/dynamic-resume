@@ -4,3 +4,4 @@
 /public/assets/videos/*
 /vendor
 .env
+.htaccess
