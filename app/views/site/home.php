@@ -5,10 +5,52 @@
   	<link rel="stylesheet" href="<?php asset('css/site/about.css') ?>"/>
   	<link rel="stylesheet" href="<?php asset('css/site/contact.css') ?>"/>
   	<link rel="stylesheet" href="<?php asset('css/site/projects.css') ?>"/>
+  	<link rel="stylesheet" href="<?php asset('css/site/slider.css') ?>"/>
 <?=$this->section_end() ?>
 
 <?=$this->section_start('scripts') ?>
-  	
+  	<script src="<?php asset('js/site/changeLayoutImages.js') ?>"></script>
+  	<script src="<?php asset('js/site/slider.js') ?>"></script>
+
+	<script>
+		let mobileImages = [];
+		let desktopImages = [];
+
+		<?php foreach($projects as $project): ?>
+			mobileImages = [];
+			desktopImages = [];
+
+			<?php foreach($project->images as $image): ?>
+				<?php if($image->type == 'mobile'): ?>
+					mobileImages.push('<?php asset('images/' . $image->path) ?>')
+				<?php elseif($image->type == 'desktop'): ?>
+					desktopImages.push('<?php asset('images/' . $image->path) ?>')
+				<?php endif ?>
+			<?php endforeach ?>
+
+			const mobileSlider<?php echo $project->id ?> = new Slider(
+				'mobileSlider<?php echo $project->id ?>', mobileImages, {
+					previous: {
+						text: '<i class="fa-solid fa-chevron-left"></i>',
+					},
+					next: {
+						text: '<i class="fa-solid fa-chevron-right"></i>',
+					},
+				}
+			);
+
+			const desktopSlider<?php echo $project->id ?> = new Slider(
+				'desktopSlider<?php echo $project->id ?>', desktopImages, {
+					previous: {
+						text: '<i class="fa-solid fa-chevron-left"></i>',
+					},
+					next: {
+						text: '<i class="fa-solid fa-chevron-right"></i>',
+					},
+				}
+			);
+		<?php endforeach ?>
+	</script>
 <?=$this->section_end() ?>
 
 <div class="home">
@@ -60,40 +102,22 @@
 			<?php foreach($projects as $project): ?>
 				<div class="project">
 					<div class="project-thumb">
-						<?php if(isset($project->video) and $project->video !== ''): ?>
-							<video
-								muted
-								src="<?php asset('videos/' . $project->video) ?>"
-								poster="<?php asset('images/' . $project->img) ?>"
-								onmouseover="this.play()" onmouseout="this.pause()"
-							>Your browser does not support the video tag.</video>
-						<?php else: ?>
-							<img src="<?php asset('images/' . $project->img) ?>" alt="<?php echo $project->title ?>" />
-						<?php endif; ?>
-
+						<img src="<?php asset('images/' . $project->thumb->path) ?>" alt="<?php echo $project->title ?>"/>
 						<h3><?php echo $project->title ?></h3>
 					</div><!-- project-thumb -->
 
 					<div class="project-modal">
 						<div class="project-modal-content">
 							<div class="project-modal-close">
-								<button id="btn-close">x</button>
+								<button id="btn-close"><i class="fa-solid fa-xmark"></i></button>
 							</div><!-- project-modal-close -->
 
-							<a href="<?php echo $project->href ?>" target="_blank">
-								<div class="project-modal-thumb">
-									<?php if(isset($project->video) and $project->video !== ''): ?>
-										<video
-											muted
-											src="<?php asset('videos/' . $project->video) ?>"
-											poster="<?php asset('images/' . $project->img) ?>"
-											onmouseover="this.play()" onmouseout="this.pause()"
-										>Your browser does not support the video tag.</video>
-									<?php else: ?>
-										<img src="<?php asset('images/' . $project->img) ?>" alt="<?php echo $project->title ?>"/>
-									<?php endif; ?>
-								</div><!-- project-modal-thumb -->
-							</a>
+							<div class="project-modal-slider">
+								<div class="hidden" id="mobileSlider<?php echo $project->id ?>" data-type="mobile"></div>
+								<div id="desktopSlider<?php echo $project->id ?>" data-type="desktop"></div>
+
+								<button class="btn-change-layout" onclick="changeLayoutImages(this, <?php echo $project->id ?>)" data-type="desktop"><i class="fa-solid fa-mobile-screen"></i> Mobile</button>
+							</div><!-- project-modal-slider -->
 
 							<div class="project-modal-title">
 								<h3><?php echo $project->title; ?></h3>

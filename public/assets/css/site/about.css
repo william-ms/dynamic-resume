@@ -22,6 +22,7 @@
 @media screen and (max-width: 960px) {
   #about {
     width: 100%;
+    height: 100vh;
     background-color: var(--bg-color-third);
     background-image: url('../../images/bg-about.png');
     background-position: 94% 80%;
